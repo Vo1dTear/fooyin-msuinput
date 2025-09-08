@@ -17,7 +17,7 @@ See the [Fooyin build instructions](https://github.com/fooyin/fooyin/blob/master
 
 ```bash
 # Clone this repository
-git clone <your-repo-url> fooyin-msuinput
+git clone https://github.com/Vo1dTear/fooyin-msuinput.git
 cd fooyin-msuinput
 
 # Create a build directory and navigate into it
