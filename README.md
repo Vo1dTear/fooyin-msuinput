@@ -15,18 +15,23 @@ See the [Fooyin build instructions](https://github.com/fooyin/fooyin/blob/master
 
 ## Build Instructions
 
+#### Clone this repository
 ```bash
-# Clone this repository
 git clone https://github.com/Vo1dTear/fooyin-msuinput.git
 cd fooyin-msuinput
+```
 
-# Create a build directory and navigate into it
+#### Create a build directory and navigate into it
+```bash
 mkdir build && cd build
-
-# Configure the project with CMake
+```
+#### Configure the project with CMake
+```bash
 cmake ..
+```
 
-# Build Fooyin along with the msuinput plugin
+#### Build Fooyin along with the msuinput plugin
+```
 cmake --build . -- -j$(nproc)
 ```
 
