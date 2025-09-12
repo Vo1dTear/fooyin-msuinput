@@ -50,7 +50,7 @@ message(STATUS "  cmake -G Ninja ${FOOYIN_SRC} -DCMAKE_BUILD_TYPE=Release")
 message(STATUS "  cmake --build . -- -j\$(nproc)")
 message(STATUS "")
 message(STATUS "📦 After building, copy the plugin manually with:")
-message(STATUS "  cmake --build build --target copy_msu")
+message(STATUS "  cmake --build build --target copy_msu_lib")
 
 # ---------------- Manual copy command ----------------
 set(MSU_LIB_PATH ${FOOYIN_BUILD}/run/lib/fooyin/plugins/fyplugin_msuinput.so)
