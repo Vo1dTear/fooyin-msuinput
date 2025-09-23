@@ -183,16 +183,12 @@ namespace Fooyin::MSU {
         //track.setCodec(u"PCM (MSU-1)"_s);
         track.setEncoding(u"Lossless"_s);
 
-        // Metadata tags for LOOP
-        track.setExtraProperty(QStringLiteral("Loop Point: milliseconds"), QString::number(tmpDecoder->loopTimeMs()));
-        track.setExtraProperty(QStringLiteral("Loop Point: samples"), QString::number(tmpDecoder->loopFrame()));
+        // Add loop point information to the track's Details tab
+        track.setExtraProperty(QStringLiteral("LOOPSTART - ms"), QString::number(tmpDecoder->loopTimeMs()));
+        track.setExtraProperty(QStringLiteral("LOOPSTART - Samples"), QString::number(tmpDecoder->loopFrame()));
 
-        /*
-         *        // This looks ugly
-         *        track.setComment(QStringLiteral("Loop point: %1 ms\nLoop frame: %2")
-         *        .arg(tmpDecoder->loopTimeMs())
-         *        .arg(tmpDecoder->loopFrame()));
-         */
+        // Add loop point information to the track's Metadata tab
+        //track.setComment(QStringLiteral("LOOPSTART: %1").arg(tmpDecoder->loopFrame()));
 
         return true;
     }
